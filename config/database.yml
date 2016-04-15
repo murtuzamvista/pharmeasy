@@ -1,0 +1,25 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  template: template0
+  pool: 20
+  host: "<%= $APP_CONFIG['postgresql']['host'] %>"
+  database: "<%= $APP_CONFIG['postgresql']['database'] %>"
+  username: "<%= $APP_CONFIG['postgresql']['username'] %>"
+  password: "<%= $APP_CONFIG['postgresql']['password'] %>"
+
+development:
+  <<: *default
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+
+test:
+  <<: *default
+
+feature:
+  <<: *default
+
+production:
+  <<: *default
