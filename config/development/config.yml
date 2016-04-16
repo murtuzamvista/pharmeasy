@@ -1,4 +1,6 @@
-google_maps_api_key: AIzaSyDTqtmrydnGQEcjZhsDgCpXN09415u2xQg
+google_maps:
+  url: "https://maps.googleapis.com/maps/api/geocode/"
+  api_key: AIzaSyDTqtmrydnGQEcjZhsDgCpXN09415u2xQg
 postgresql:
   host: localhost
   database: pharmeasy

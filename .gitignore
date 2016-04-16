@@ -13,6 +13,7 @@
 /tmp
 config/production/*
 Gemfile.lock
+db/schema.rb
 *.swp
 *.DS_Store
 *.rdb
