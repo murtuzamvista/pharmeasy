@@ -1,6 +1,7 @@
 google_maps_api_key: AIzaSyDTqtmrydnGQEcjZhsDgCpXN09415u2xQg
 postgresql:
   host: localhost
-  database: pharmeasy_test
+  database: pharmeasy
+  test_database: pharmeasy_test
   username: pharmeasy
   password: password

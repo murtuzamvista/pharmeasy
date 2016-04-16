@@ -17,6 +17,7 @@ development:
 
 test:
   <<: *default
+  database: "<%= $APP_CONFIG['postgresql']['test_database'] %>"
 
 feature:
   <<: *default
