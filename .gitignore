@@ -17,4 +17,4 @@ db/schema.rb
 *.swp
 *.DS_Store
 *.rdb
-
+.byebug_history

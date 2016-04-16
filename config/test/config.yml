@@ -7,3 +7,4 @@ postgresql:
   test_database: pharmeasy_test
   username: pharmeasy
   password: password
+movies_url: 'https://data.sfgov.org/resource/yitu-d5am.json'

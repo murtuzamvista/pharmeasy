@@ -22,8 +22,11 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'protected_attributes'
-gem 'rest-client'
+gem 'protected_attributes' # For attr_accessible
+gem 'rest-client' # For REST HTTP calls
+gem 'redcarpet' # Dependency of yard-restful
+gem 'yard' # Dependency of yard-restful
+gem 'yard-restful' # REST APIs Documentation
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

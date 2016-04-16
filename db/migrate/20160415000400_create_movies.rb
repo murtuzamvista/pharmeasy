@@ -9,7 +9,8 @@ class CreateMovies < ActiveRecord::Migration
       t.string :production_company
       t.string :fun_facts
       t.string :distributor
-      t.column :status, :movie_status, null: false, index: true
+      t.column :status, :movie_status, null: false, index: true,
+                default: 'active'
 
       t.timestamps null: false
     end
