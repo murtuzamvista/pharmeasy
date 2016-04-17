@@ -32,7 +32,7 @@
 * rails s -e production
 ==== Populating Database
 ===== Option 1
-* +psql prod-database-name < pharmeasy.db+
+* psql prod-database-name < pharmeasy.db
 * GET http://localhost:3000/movies/rebuild_cache
 ===== Option 2
 * GET http://localhost:3000/movies/sync
