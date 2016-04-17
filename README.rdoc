@@ -44,5 +44,6 @@
 * GET http://localhost:3000/movies/              => Fetch all the movies
 * GET http://localhost:3000/movies/The Dead Pool => Fetch details of the given movie
 * GET http://localhost:3000/movies/search/a      => Fetch details of all the movies starting with 'a/A'
-
+==== Postman Collection
+* https://www.getpostman.com/collections/166c2c1610f8ecdbe6f8
 
