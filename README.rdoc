@@ -2,7 +2,7 @@
 
 === Deployment on Production
 ===== Install RVM: (1.26.11)
-* \curl -L https://get.rvm.io | bash -s stable --rails
+* \\curl -L https://get.rvm.io | bash -s stable --rails
 ===== Install rails: (4.2.6)
 * gem install rails
 ===== Install Postgresql:(0.18.4)
