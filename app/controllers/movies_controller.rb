@@ -11,7 +11,7 @@ class MoviesController < ApplicationController
     meta = nil
     if payload.blank?
       status = 400
-      meta = {message: 'Not Found'}
+      meta = { message: 'Not Found' }
     end
     render json: { payload: payload, meta: meta },
            status: status
@@ -24,6 +24,16 @@ class MoviesController < ApplicationController
   end
 
   def search
-    render json: {method: 'search'}
+    meta = { message: 'Not Found' }
+    status = 400
+    payload = MovieService.search(params['query'])
+
+    if payload.present?
+      status = :ok
+      meta = nil
+    end
+    render json: { payload: payload, meta: meta },
+           status: status
   end
+
 end
