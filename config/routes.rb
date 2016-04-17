@@ -3,7 +3,11 @@ Rails.application.routes.draw do
 
   put 'movies/sync' => 'movies#sync'
 
-  get 'movies/search' => 'movies#search'
+  get 'movies/search/:query' => 'movies#search'
+
+  get 'movies/rebuild_cache' => 'movies#rebuild_cache'
+
+  get 'movies/:title' => 'movies#show'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

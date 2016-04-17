@@ -56,7 +56,9 @@ class MovieService
     end
 
     def by_title(title)
-      Rails.cache.fetch(CACHE_NAME)[title]
+      movies = Rails.cache.fetch(CACHE_NAME)
+      return if movies.blank?
+      movies.fetch(title, nil)
       # movie = Movie.where('upper(title) = ?', title.upcase).first
       # return if movie.blank?
       # payload(movie)

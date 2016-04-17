@@ -1,0 +1,10 @@
+--protected
+--private
+--title "Movies API Documentation"
+--plugin restful
+--markup markdown
+--readme API_README
+--output-dir ./public/api
+--query '@restful_api.text == "1.0"'
+app/models/**/*.rb
+app/controllers/**/*.rb

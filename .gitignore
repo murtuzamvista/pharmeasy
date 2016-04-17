@@ -18,3 +18,5 @@ db/schema.rb
 *.DS_Store
 *.rdb
 .byebug_history
+.yardoc
+public/api
