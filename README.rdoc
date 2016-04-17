@@ -1,28 +1,48 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+=== Deployment on Production
+===== Install RVM: (1.26.11)
+* \curl -L https://get.rvm.io | bash -s stable --rails
+===== Install rails: (4.2.6)
+* gem install rails
+===== Install Postgresql:(0.18.4)
+* gem install pg
+===== Start PostgreSQL:
+* sudo service postgresql start
+===== Open PostgreSQL console:
+* sudo sudo -u postgres psql
+===== Create role/user:
+* create role pharmeasy with createdb login password 'your_password';
+===== Change 'peer' to 'md5' in below file:
+* /etc/postgresql/9.3/main/pg_hba.conf
+===== Restart PostgreSQL:
+* /etc/init.d/postgresql restart
+===== Clone project and cd into it:
+* git clone https://github.com/murtuzamvista/pharmeasy.git
+* cd pharmeasy
+===== Bundler
+* bundle install
+===== Production configuration
+* mkdir config/production
+* cp config/development/config.yml config/production/config.yml
+* Change database and password fields in the above config.yml
+===== DB Setup:
+* RAILS_ENV=production rake db:drop db:create db:migrate
+===== Server startup
+* rails s -e production
+==== Populating Database
+===== Option 1
+* psql <prod-database-name> < pharmeasy.db
+* GET http://localhost:3000/movies/rebuild_cache
+===== Option 2
+* GET http://localhost:3000/movies/sync
+==== API Documentation
+* bundle exec yardoc
+* open public/api/index.html
+==== API Brief
+* PUT http://localhost:3000/movies/sync          => Populate Database from a remote API
+* GET http://localhost:3000/movies/              => Fetch all the movies
+* GET http://localhost:3000/movies/The Dead Pool => Fetch details of the given movie
+* GET http://localhost:3000/movies/search/a      => Fetch details of all the movies starting with 'a/A'
 
-Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
